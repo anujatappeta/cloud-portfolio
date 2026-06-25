@@ -1,282 +1,131 @@
-# AWS Portfolio Deployment Project  ☁️
+# AWS Portfolio Deployment Project ☁️
 
-## Role
-
-Built and deployed a production-style full stack cloud application demonstrating practical implementation of cloud infrastructure using core AWS services.
+Built and deployed my personal portfolio website using AWS cloud services by integrating frontend hosting, backend deployment, database storage, and automated email notification workflow.
 
 ---
 
-# Goal
+# 🚀 Live Project
 
-Design and deploy a real-world cloud-native web application architecture integrating frontend hosting, content delivery network, backend server deployment, and managed relational database services.
+**CloudFront URL**  
+https://d1eftdnww0jk7u.cloudfront.net  
 
-Primary focus:
-
-- Real cloud infrastructure deployment
-- Service integration across AWS ecosystem
-- Scalable application architecture
-- Production-style deployment workflow
-- Practical hands-on cloud engineering implementation
-
----
-
-# Cloud Stack Used
-
-Infrastructure Services:
-
-- AWS S3
-- AWS CloudFront
-- AWS EC2
-- AWS RDS MySQL
-
-Development Stack:
-
-- HTML5
-- CSS3
-- JavaScript
-- Python
-- MySQL
-
-Deployment Tools:
-
-- Linux
-- SSH
-- Git
-- GitHub
-
----
-
-# Live Deployment Links
-
-## CloudFront CDN Endpoint
-
-https://d1eftdnww0jk7u.cloudfront.net
-
-## Amazon S3 Website Endpoint
-
+**S3 Website URL**  
 http://anuja-portfolio-cloud.s3-website.ap-south-1.amazonaws.com/
 
 ---
 
-# Architecture Design
+# AWS Services Used
+
+- AWS S3  
+- AWS CloudFront  
+- AWS EC2  
+- AWS RDS MySQL  
+- AWS SES  
+- IAM  
+
+---
+
+# What I Implemented
+
+- Hosted portfolio frontend on AWS S3  
+- Connected CloudFront CDN with S3 for faster delivery  
+- Deployed Flask backend on EC2 instance  
+- Connected backend with AWS RDS MySQL database  
+- Stored contact form data inside MySQL database  
+- Integrated AWS SES for automatic email notification  
+- Configured IAM user permissions for SES access  
+- Connected multiple AWS services into one architecture  
+
+---
+
+# Project Architecture
 
 ```text
-User Browser
-      │
-      ▼
-AWS CloudFront CDN
-      │
-      ▼
-Amazon S3 Static Website Hosting
-      │
-      ▼
-Frontend Sends API Request
-      │
-      ▼
-Amazon EC2 Backend Server
-      │
-      ▼
-Backend Connects To Database
-      │
-      ▼
-Amazon RDS MySQL Database
+User Opens Portfolio Website
+            ↓
+CloudFront CDN
+            ↓
+AWS S3 Frontend Hosting
+            ↓
+Contact Form Submission
+            ↓
+Flask Backend on EC2
+            ↓
+Store Data in RDS MySQL
+            ↓
+AWS SES Sends Email Notification
 ```
 
 ---
 
-# AWS Services Implementation
-
-## Amazon S3
-
-Implemented:
-
-* Created S3 bucket
-* Configured static website hosting
-* Uploaded frontend portfolio files
-* Configured bucket access policy
-* Hosted public frontend application
-
-Purpose:
-
-Static frontend hosting without managing servers.
-
----
-
-## Amazon CloudFront
-
-Implemented:
-
-* Created CloudFront distribution
-* Connected S3 bucket as origin
-* Configured CDN content delivery
-* Enabled edge caching
-* Improved website global performance
-
-Purpose:
-
-Deliver website through AWS global edge locations with reduced latency.
-
----
-
-## Amazon EC2
-
-Implemented:
-
-* Launched Ubuntu EC2 instance
-* Connected remotely using SSH terminal
-* Installed Python environment
-* Deployed backend server application
-* Configured API handling for form submission
-* Connected backend with AWS RDS
-
-Purpose:
-
-Backend compute layer for processing application requests.
-
----
-
-## Amazon RDS MySQL
-
-Implemented:
-
-* Created managed MySQL database instance
-* Configured database connection from EC2 backend
-* Stored user submitted contact form information
-* Managed relational structured data storage
-
-Database Schema:
-
-```sql
-CREATE TABLE contacts (
-    id INT NOT NULL AUTO_INCREMENT,
-    name VARCHAR(100) DEFAULT NULL,
-    email VARCHAR(100) DEFAULT NULL,
-    message TEXT,
-    PRIMARY KEY (id)
-);
-```
-
-Purpose:
-
-Persistent managed cloud database for storing application data.
-
----
-
-# Application Workflow
+# Workflow
 
 ```text
-Step 1
+1. User visits portfolio website
 
-User opens portfolio website
+2. Website loads from S3 through CloudFront
 
-↓
+3. User submits contact form
 
-Step 2
+4. Form request reaches EC2 backend
 
-CloudFront receives request
+5. Backend stores data in RDS database
 
-↓
-
-Step 3
-
-CloudFront fetches frontend content from S3
-
-↓
-
-Step 4
-
-Portfolio website loads frontend files
-
-↓
-
-Step 5
-
-User submits contact form
-
-↓
-
-Step 6
-
-Frontend sends request to backend running on EC2
-
-↓
-
-Step 7
-
-Backend validates request data
-
-↓
-
-Step 8
-
-Backend connects with AWS RDS MySQL
-
-↓
-
-Step 9
-
-Data inserted into database successfully
+6. AWS SES automatically sends email notification
 ```
 
 ---
 
-# Features Implemented
+# Tech Stack
 
-* Static website hosting using AWS S3
-* Global CDN acceleration using CloudFront
-* Backend deployment on AWS EC2
-* Secure remote server access using SSH
-* Contact form API processing
-* MySQL database integration using AWS RDS
-* Persistent cloud database storage
-* End-to-end cloud infrastructure integration
+Frontend
 
----
+- HTML  
+- CSS  
+- JavaScript  
 
-# Technical Skills Demonstrated
+Backend
 
-Cloud Engineering:
+- Python Flask  
 
-* AWS Infrastructure Deployment
-* Cloud Resource Provisioning
-* CDN Configuration
-* Server Deployment
-* Database Connectivity
-* Distributed Cloud Architecture
-* Service Integration
+Database
 
-Backend Engineering:
+- MySQL  
 
-* Python API Development
-* Request Processing
-* Database Integration
+Cloud Services
 
-DevOps Fundamentals:
+- AWS S3  
+- CloudFront  
+- EC2  
+- RDS  
+- SES  
 
-* Linux Server Management
-* SSH Remote Access
-* Git Version Control
-* GitHub Repository Management
+Tools
+
+- Git  
+- GitHub  
+- Linux  
+- SSH  
 
 ---
 
-# Learning Outcomes
+# Skills Demonstrated
 
-Successfully gained practical understanding of:
-
-* Cloud architecture design
-* Production deployment workflow
-* Service-to-service communication inside AWS
-* Backend and database connectivity in cloud
-* Cloud resource management
-* Scalable web infrastructure deployment
+- AWS Cloud Deployment  
+- EC2 Server Management  
+- Database Integration with RDS  
+- CDN Configuration using CloudFront  
+- Email Automation using AWS SES  
+- Backend API Development using Flask  
+- Linux Server Management  
+- Cloud Architecture Integration  
 
 ---
 
 # Author
 
-Anuja Tappeta
+**Anuja Tappeta**
 
-Aspiring Cloud Engineer | AWS
+Aspiring Cloud Engineer | AWS | Python  
 
 © 2026 All Rights Reserved
