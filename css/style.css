@@ -1225,7 +1225,7 @@ section {
   text-align: left;
 }
 .timeline-body ul li::before {
-  content: '•';
+  content: 'â€¢';
   color: var(--primary-color);
   position: absolute;
   left: 0;
