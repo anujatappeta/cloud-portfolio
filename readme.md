@@ -1,480 +1,285 @@
-# Personal Portfolio Website Development Specification
+````md
+# AWS Full Stack Cloud Deployment Project ☁️
 
 ## Role
-You are a **Senior Full Stack Web Developer and UI/UX Architect**.
 
-## Goal
-Build an **ultra-premium, highly animated, modern 3D personal portfolio website** that immediately impresses **MNC recruiters (Google, Microsoft, Amazon, Adobe, Atlassian, Nvidia, Goldman Sachs, Uber, Cisco, Oracle, etc.)**.
-
-The portfolio should look like a **top-tier award-winning developer portfolio**, not a normal student portfolio.
-
-Primary focus:
-- Strong visual impact
-- Smooth animations
-- 3D interactive effects
-- Premium recruiter-friendly presentation
-- Professional but futuristic design
+Built and deployed a production-style full stack cloud application demonstrating practical implementation of cloud infrastructure using core AWS services.
 
 ---
 
-# Tech Stack (STRICTLY USE ONLY)
+# Goal
+
+Design and deploy a real-world cloud-native web application architecture integrating frontend hosting, content delivery network, backend server deployment, and managed relational database services.
+
+Primary focus:
+
+- Real cloud infrastructure deployment
+- Service integration across AWS ecosystem
+- Scalable application architecture
+- Production-style deployment workflow
+- Practical hands-on cloud engineering implementation
+
+---
+
+# Cloud Stack Used
+
+Infrastructure Services:
+
+- AWS S3
+- AWS CloudFront
+- AWS EC2
+- AWS RDS MySQL
+
+Development Stack:
 
 - HTML5
 - CSS3
 - JavaScript
-- Bootstrap 5
-
-DO NOT USE:
-- React
-- Next.js
-- Tailwind
-- Node.js
-- Backend frameworks
-
-Only frontend stack.
-
----
-
-# Overall Theme
-
-Design style should feel inspired by:
-
-- Apple Vision Pro website
-- Apple UI animations
-- Tesla website smooth scrolling
-- Three.js style 3D interactions (but using only HTML/CSS/JS)
-- Glassmorphism + Neumorphism
-- Futuristic dark mode
-
-Website should feel:
-
-- Premium
-- Modern
-- Highly interactive
-- Cinematic
-- Smooth animations everywhere
-
-No simple student portfolio design.
-
----
-
-# Global Requirements
-
-Must include:
-
-- Page loader animation
-- Smooth scrolling
-- Animated mouse follower
-- 3D tilt cards
-- Glassmorphism UI cards
-- Floating particles background
-- Gradient animated backgrounds
-- Scroll reveal animations
-- Hover effects everywhere
-- Parallax scrolling
-- Animated section transitions
-- Custom animated cursor
-- Neon lighting effects
-- Typing effect text
-- Dynamic counters
-- Animated skill progress bars
-- Fully responsive mobile + desktop
-- Premium transitions
-
-Everything should feel expensive.
-
----
-
-# Color Palette
-
-Primary:
-- Electric Blue (#00d4ff)
-
-Secondary:
-- Purple Neon (#8a2be2)
-
-Accent:
-- Cyan (#00ffff)
-
-Background:
-- Deep Black (#050505)
-
-Cards:
-- Glass transparent effect
-
-Buttons:
-- Gradient animated buttons
-
-Text:
-- White + subtle glowing effect
-
----
-
-# Navigation Bar
-
-Sticky top navigation with blur effect.
-
-Menu:
-
-- Home
-- About
-- Skills
-- Projects
-- Certifications
-- Experience
-- Contact
-
-Requirements:
-
-- Smooth underline animation
-- Transparent navbar
-- Floating effect
-- Scroll shrink animation
-
----
-
-# HOME SECTION (Hero Section)
-
-This must be the strongest section.
-
-Full screen section.
-
-Left side:
-
-Large animated text:
-
-ANUJA TAPPETA
-
-Animated role changer:
-
-- Software Developer
-- AI/ML Enthusiast
-- Cloud Learner
-- Problem Solver
-- Future Software Engineer
-
-Below text:
-
-"Building intelligent solutions with code, creativity and innovation."
-
-Buttons:
-
-- View Projects
-- Download Resume
-- Contact Me
-
-Right side:
-
-Create a 3D animated developer workspace.
-
-Must include:
-
-- Floating laptop
-- Rotating code snippets
-- Floating technology icons
-- 3D cubes moving slowly
-
-Background:
-
-Animated particles + glowing lines.
-
----
-
-# ABOUT SECTION
-
-Create premium glassmorphism card.
-
-Details:
-
-Name:
-Anuja Tappeta
-
-Education:
-
-B.Tech Computer Science Engineering
-
-College:
-
-Velagapudi Ramakrishna Siddhartha Engineering College
-
-CGPA:
-
-9.13
-
-Objective:
-
-To secure a challenging position where I can apply my technical knowledge, problem-solving skills, and passion for learning to contribute to the organization’s success while continuously improving my skills.
-
-Animation:
-
-- Card should rotate slightly on mouse movement
-- Floating glow border animation
-
----
-
-# SKILLS SECTION
-
-Create futuristic circular 3D skill cards.
-
-Show with animated progress rings.
-
-Languages:
-
 - Python
-- Java
-- C
+- MySQL
 
-Database:
+Deployment Tools:
 
-- SQL (Oracle SQL Plus 21c)
-
-Tools:
-
+- Linux
+- SSH
 - Git
 - GitHub
 
-Cloud:
+---
 
-- AWS Cloud
+# Live Deployment Links
 
-AI/ML:
+## CloudFront CDN Endpoint
 
-- Retrieval-Augmented Generation (Basics)
+https://d1eftdnww0jk7u.cloudfront.net
 
-Soft Skills:
+## Amazon S3 Website Endpoint
 
-- Team Player
-- Problem Solving
-- Communication
-- Decision Making
-
-Animation requirements:
-
-- Skills cards rotate in 3D
-- Progress animation starts on scroll
-- Hover lifts cards upward
+http://anuja-portfolio-cloud.s3-website.ap-south-1.amazonaws.com/
 
 ---
 
-# PROJECTS SECTION
+# Architecture Design
 
-VERY IMPORTANT
-
-Create premium interactive project cards.
-
-When clicking each card:
-
-Expand and show detailed project modal with animations.
-
-Use large cards with tilt effect.
-
-Project 1:
-
-## Website Based RAG Chatbot Using LangChain
-
-Tech:
-
-- LangChain
-- ChromaDB
-- Groq LLM
-
-Features:
-
-- Web scraping
-- Recursive chunking
-- Embeddings
-- Website question answering system
-- Vector database retrieval
-
-Add animation:
-
-Floating AI neural network animation.
-
---------------------------------
-
-Project 2:
-
-## Mango Leaf Disease Detection and Organic Solutions Recommendation
-
-Tech:
-
-- Python
-- Deep Learning
-- EfficientNet-B3 CNN
-
-Features:
-
-- Disease classification
-- Organic solution recommendation
-- AI-based agricultural assistance
-
-Animation:
-
-3D rotating leaf model.
-
---------------------------------
-
-Make cards expand beautifully when clicked.
-
-Add GitHub button.
-
-Add Live Demo placeholder.
+```text
+User Browser
+      │
+      ▼
+AWS CloudFront CDN
+      │
+      ▼
+Amazon S3 Static Website Hosting
+      │
+      ▼
+Frontend Sends API Request
+      │
+      ▼
+Amazon EC2 Backend Server
+      │
+      ▼
+Backend Connects To Database
+      │
+      ▼
+Amazon RDS MySQL Database
+````
 
 ---
 
-# CERTIFICATIONS SECTION
+# AWS Services Implementation
 
-Display certificates as premium floating cards.
+## Amazon S3
 
-Certificates:
+Implemented:
 
-- AWS Cloud Practitioner Essentials
-- Cisco CCNA 1 Introduction to Networks
-- Cisco CCNA 2 Switching Routing Wireless Essentials
-- Cisco CCNA 3 Enterprise Networking Security and Automation
+* Created S3 bucket
+* Configured static website hosting
+* Uploaded frontend portfolio files
+* Configured bucket access policy
+* Hosted public frontend application
 
-Animation:
+Purpose:
 
-Cards should float in air.
-
-Hover:
-
-Cards rotate in 3D.
+Static frontend hosting without managing servers.
 
 ---
 
-# EXPERIENCE SECTION
+## Amazon CloudFront
 
-Create animated timeline.
+Implemented:
 
-Experience:
+* Created CloudFront distribution
+* Connected S3 bucket as origin
+* Configured CDN content delivery
+* Enabled edge caching
+* Improved website global performance
 
-## Infosys Springboard Virtual Internship 6.0
+Purpose:
 
-Role:
-
-AI/ML Virtual Intern
-
-Work:
-
-- Developed AI powered e-commerce recommendation system using Python Reflex
-- Implemented content based filtering
-- Implemented collaborative filtering
-- Implemented hybrid recommendation system
-
-Animation:
-
-Timeline lights up while scrolling.
+Deliver website through AWS global edge locations with reduced latency.
 
 ---
 
-# ACHIEVEMENTS SECTION
+## Amazon EC2
 
-Animated counter section.
+Implemented:
 
-Show:
+* Launched Ubuntu EC2 instance
+* Connected remotely using SSH terminal
+* Installed Python environment
+* Deployed backend server application
+* Configured API handling for form submission
+* Connected backend with AWS RDS
 
-- Qualified GATE 2026 (CSE)
+Purpose:
 
-Counter animation:
-
-0 → Achievement unlocked
-
-Use glowing trophy animation.
-
----
-
-# CONTACT SECTION
-
-Create premium contact area.
-
-Include:
-
-Email:
-
-anujatappeta@gmail.com
-
-Phone:
-
-+91-7842323599
-
-Social Links:
-
-- LinkedIn
-- GitHub
-- GeeksForGeeks
-- Leetcode
-
-Contact form:
-
-- Name
-- Email
-- Message
-
-Button:
-
-SEND MESSAGE
-
-Animation:
-
-3D send button explosion effect.
+Backend compute layer for processing application requests.
 
 ---
 
-# FOOTER
+## Amazon RDS MySQL
 
-Minimal premium footer.
+Implemented:
 
-Include:
+* Created managed MySQL database instance
+* Configured database connection from EC2 backend
+* Stored user submitted contact form information
+* Managed relational structured data storage
 
-© 2026 Anuja Tappeta
+Database Schema:
 
-Text:
+```sql
+CREATE TABLE contacts (
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(100) DEFAULT NULL,
+    email VARCHAR(100) DEFAULT NULL,
+    message TEXT,
+    PRIMARY KEY (id)
+);
+```
 
-Designed with innovation and code.
+Purpose:
 
-Background:
-
-Animated glowing wave effect.
-
----
-
-# Performance Requirements
-
-Website must:
-
-- Load fast
-- No lag animations
-- Optimized CSS
-- Smooth 60 FPS animations
+Persistent managed cloud database for storing application data.
 
 ---
 
-# UI Quality Requirements
+# Application Workflow
 
-Do NOT create:
+```text
+Step 1
 
-- Simple student portfolio
-- Plain bootstrap cards
-- Generic portfolio template
-- Basic animations
+User opens portfolio website
 
-Create:
+↓
 
-- Premium recruiter-catching portfolio
-- Looks like senior software engineer portfolio
-- Professional enough for FAANG recruiters
+Step 2
+
+CloudFront receives request
+
+↓
+
+Step 3
+
+CloudFront fetches frontend content from S3
+
+↓
+
+Step 4
+
+Portfolio website loads frontend files
+
+↓
+
+Step 5
+
+User submits contact form
+
+↓
+
+Step 6
+
+Frontend sends request to backend running on EC2
+
+↓
+
+Step 7
+
+Backend validates request data
+
+↓
+
+Step 8
+
+Backend connects with AWS RDS MySQL
+
+↓
+
+Step 9
+
+Data inserted into database successfully
+```
 
 ---
 
-# Final Impression Goal
+# Features Implemented
 
-When recruiter opens website, reaction should be:
+* Static website hosting using AWS S3
+* Global CDN acceleration using CloudFront
+* Backend deployment on AWS EC2
+* Secure remote server access using SSH
+* Contact form API processing
+* MySQL database integration using AWS RDS
+* Persistent cloud database storage
+* End-to-end cloud infrastructure integration
 
-"This candidate is exceptional."
+---
 
-Website must look 10/10.
+# Technical Skills Demonstrated
 
-No compromise on animations.
+Cloud Engineering:
 
-Every section should feel premium and futuristic.
+* AWS Infrastructure Deployment
+* Cloud Resource Provisioning
+* CDN Configuration
+* Server Deployment
+* Database Connectivity
+* Distributed Cloud Architecture
+* Service Integration
+
+Backend Engineering:
+
+* Python API Development
+* Request Processing
+* Database Integration
+
+DevOps Fundamentals:
+
+* Linux Server Management
+* SSH Remote Access
+* Git Version Control
+* GitHub Repository Management
+---
+
+# Learning Outcomes
+
+Successfully gained practical understanding of:
+
+* Cloud architecture design
+* Production deployment workflow
+* Service-to-service communication inside AWS
+* Backend and database connectivity in cloud
+* Cloud resource management
+* Scalable web infrastructure deployment
+
+---
+
+# Author
+
+Anuja Tappeta
+
+Aspiring Cloud Engineer | AWS 
+
+© 2026 All Rights Reserved
+
+```
+```
