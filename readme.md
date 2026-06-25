@@ -1,4 +1,4 @@
-# AWS Full Stack Cloud Deployment Project ☁️
+# AWS Portfolio Deployment Project  ☁️
 
 ## Role
 
