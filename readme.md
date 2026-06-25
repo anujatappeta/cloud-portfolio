@@ -1,4 +1,3 @@
-
 # AWS Full Stack Cloud Deployment Project ☁️
 
 ## Role
@@ -81,7 +80,7 @@ Backend Connects To Database
       │
       ▼
 Amazon RDS MySQL Database
-````
+```
 
 ---
 
@@ -258,6 +257,7 @@ DevOps Fundamentals:
 * SSH Remote Access
 * Git Version Control
 * GitHub Repository Management
+
 ---
 
 # Learning Outcomes
@@ -277,8 +277,6 @@ Successfully gained practical understanding of:
 
 Anuja Tappeta
 
-Aspiring Cloud Engineer | AWS 
+Aspiring Cloud Engineer | AWS
 
 © 2026 All Rights Reserved
-
-```
