@@ -1,4 +1,4 @@
-````md
+
 # AWS Full Stack Cloud Deployment Project ☁️
 
 ## Role
@@ -281,5 +281,4 @@ Aspiring Cloud Engineer | AWS
 
 © 2026 All Rights Reserved
 
-```
 ```
