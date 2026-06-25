@@ -487,30 +487,40 @@ document.addEventListener('DOMContentLoaded', () => {
   const sendBtn = document.getElementById('contact-submit-btn');
   const contactForm = document.getElementById('contact-form');
   
-  if (contactForm && sendBtn) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      
-      createExplosion(sendBtn);
+ if (contactForm && sendBtn) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-      const originalText = sendBtn.innerHTML;
-      sendBtn.innerHTML = 'MESSAGE SENT <i class="fas fa-check ml-2"></i>';
-      sendBtn.style.background = 'linear-gradient(135deg, #0071e3, #8622e7)';
-      sendBtn.disabled = true;
-      
-      setTimeout(() => {
-        contactForm.reset();
-        sendBtn.innerHTML = originalText;
-        sendBtn.style.background = '';
-        sendBtn.disabled = false;
-        
-        const inputs = contactForm.querySelectorAll('.form-input-custom');
-        inputs.forEach(input => {
-          input.dispatchEvent(new Event('input'));
-        });
-      }, 3500);
+
+    const data = {
+      name: document.getElementById("form-name").value,
+      email: document.getElementById("form-email").value,
+      message: document.getElementById("form-message").value
+    };
+
+    const response = await fetch("http://3.110.81.176:5000/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
     });
-  }
+
+    const result = await response.json();
+
+    createExplosion(sendBtn);
+
+    const originalText = sendBtn.innerHTML;
+    sendBtn.innerHTML = result.message;
+    sendBtn.disabled = true;
+
+    setTimeout(() => {
+      contactForm.reset();
+      sendBtn.innerHTML = originalText;
+      sendBtn.disabled = false;
+    }, 3000);
+  });
+}
 
   function createExplosion(element) {
     const rect = element.getBoundingClientRect();
