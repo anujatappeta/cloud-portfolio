@@ -6,9 +6,6 @@ Built and deployed my personal portfolio website using AWS cloud services by int
 
 # 🚀 Live Project
 
-**CloudFront URL**  
-https://d1eftdnww0jk7u.cloudfront.net  
-
 **S3 Website URL**  
 http://anuja-portfolio-cloud.s3-website.ap-south-1.amazonaws.com/
 
